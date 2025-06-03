@@ -1,0 +1,6 @@
+scraper:
+  base_url: "https://www.jumia.ug/catalog/"
+  selectors:
+    product: "article.prd._fb.col.c-prd"
+    name: "h3.name"
+    price: "div.prc"

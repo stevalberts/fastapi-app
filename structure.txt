@@ -1,0 +1,18 @@
+.
+├── app
+│   ├── __init__.py
+│   ├── main.py           # FastAPI app with routes for scraping and querying products
+│   ├── database.py       # PostgreSQL connection and session management
+│   ├── models.py        # SQLAlchemy model for products
+│   ├── schemas.py       # Pydantic schemas for request/response
+│   ├── scraper.py       # Scraping logic for Jumia Uganda
+│   └── utils.py         # Helper functions for parsing and logging
+├── tests
+│   ├── __init__.py
+│   ├── test_main.py
+│   ├── test_scraper.py
+├── requirements.txt      # Project dependencies
+├── .gitignore           # Git ignore file
+├── .env                 # Environment variables
+├── config.yaml          # Configuration for scraper
+└── README.md            # Project documentation
