@@ -32,4 +32,13 @@ class ProductResponse(ProductCreate):
     id: int
 
     class Config:
-        orm_mode = True
+        from_attributes = True
+
+    @staticmethod
+    def serialize_datetime(dt: Optional[datetime]) -> Optional[str]:
+        return dt.isoformat() if dt else None
+
+    def model_dump(self, **kwargs):
+        data = super().model_dump(**kwargs)
+        data["scraped_at"] = self.serialize_datetime(self.scraped_at)
+        return data
